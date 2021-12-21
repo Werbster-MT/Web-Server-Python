@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de Tempo</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <section>
+        <div class="main">
+            <h1>Conversor de Tempo</h1>
+
+            <form method="post" action="cgi-bin/tempo.py">
+                <div class="value">
+                    <div class="input-value">
+                        <label for="valor">Valor:</label> <input type="text" name="valor" id="valor" placeholder="Ex.: 100">
+                    </div>
+                </div>
+
+                <div class="convert">
+                    <div class="input-convert">
+                        <label for="unidade1">De:</label>
+                        <select name="unidade1" id="unidade1">
+                            <option value="sel">Selecione</option>
+                            <option value="seg">Segundo</option>
+                            <option value="min">Minuto</option>
+                            <option value="hr">Hora</option>
+                        </select>
+                    </div>
+
+                    <div class="input-convert">
+                        <label for="unidade2">Para:</label>
+                        <select name="unidade2" id="unidade2">
+                            <option value="sel">Selecione</option>
+                            <option value="seg">Segundo</option>
+                            <option value="min">Minuto</option>
+                            <option value="hr">Hora</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="send">
+                    <button>Enviar</button>
+                </div>
+            </form>
+
+            <a class="back" href="./index.html">Voltar</a>
+
+        </div>
+    </section>
+</body>
+</html>

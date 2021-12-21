@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@700&family=Poppins&display=swap');
+
+:root{
+    --dark: #0E103D;
+    --main: #1985A1;
+    --red: #FB3640;
+    --gold: #FFD700;
+    --clear: #DCDCDD;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Popins', sans-serif;
+}
+
+a{
+    color: #000;
+}
+
+body{
+    background: var(--main);
+}
+
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+}
+
+.main{
+    border-radius: 10px;
+    padding: 2rem;
+    width: 800px;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    color: var(--clear);
+}
+
+.main h1{
+    font-size: 3rem;
+}
+
+.main h2{
+    font-size: 2rem;
+    color: var(--gold);
+}
+
+.menu{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.menu li a{
+    font-weight: bold;
+    font-size: 1.4rem;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    background: var(--clear);
+    color: var(--main);
+    box-shadow: 0 0 .3em var(--dark);
+    transition: all .4s;
+    cursor: pointer;
+}
+
+.menu li a:hover{
+    background: var(--red);
+    color: var(--clear);
+    box-shadow: 0 0 .3rem var(--clear);
+}
+
+form label{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.input-value, .input-convert{
+    display: flex;
+    align-items: center;
+}
+
+.input-convert select, .input-convert select:enabled option {
+    cursor: pointer;
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    -ms-appearance: none;
+    background-image: none;
+    background: var(--main);
+}
+
+.input-value input, .input-convert select{
+    border: none;
+    outline: none;
+    background: none;
+    margin-left: .8rem;
+    color: var(--gold);
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.value{
+    max-width: 180px;
+}
+
+.value input{
+    width: inherit;
+}
+
+.input-value input::placeholder{
+    color: var(--gold);
+}
+
+.convert{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.send button{
+    border: none;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 0.6rem 1.2rem;
+    background: var(--clear);
+    color: var(--main);
+    box-shadow: 0 0 .3em var(--dark);
+    transition: all .4s;
+    cursor: pointer;
+}
+
+.send button:hover{
+    background: var(--red);
+    color: var(--clear);
+    box-shadow: 0 0 .3rem var(--clear);
+}
+
+.back{
+    color: var(--clear);
+    font-size: 1.3rem;
+    font-weight: bold;
+    transition: all .3s;
+}
+
+.back:hover{
+    color: var(--red);
+}
+
+@media screen and (max-width: 675px){
+    .main{
+        padding: 1rem;
+        height: 50vh;
+        gap: 40px;
+    }
+
+    .main h1, .main h2{
+        font-size: 2.5rem;
+        text-align: center;
+    }
+
+    .menu{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu li a{
+        display: inline-block;
+        font-size: 1rem;
+        width: 150px;
+        text-align: center;
+    }
+
+    form{
+        align-items: center;
+        justify-content: center;
+    }
+
+    .convert{
+        flex-direction: column;
+    }
+
+    .input-value input, .input-convert select{
+        margin-left: .8rem;
+        font-size: 1.2rem;
+    }
+
+    form label, input, #valor{
+        display: inline-block;
+        width: 80px;
+    }
+
+    #unidade1, #unidade2{
+        margin-left: 0;
+    }
+
+    .send button{
+        font-size: .8rem;
+        padding: 0.6rem 1.2rem;
+    }
+
+    .back{
+        font-size: 1rem;
+    }
+}
